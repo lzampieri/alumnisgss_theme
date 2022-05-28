@@ -53,7 +53,7 @@
     }
 
     .carousel-row {
-        @apply flex flex-row items-center justify-center w-full pt-32
+        @apply flex flex-row items-center justify-center w-full py-8
     }
     .carousel-ul {
         @apply flex flex-col md:flex-row flex-wrap justify-center gap-4 w-2/3
