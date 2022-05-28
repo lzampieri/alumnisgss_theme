@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    body {
+        @apply font-sans	
+    }
+}
+
+@layer utilities {
+    .separator {
+        @apply border-4 rounded border-details-bg self-stretch mx-8 my-8 md:my-0
+    }
+
+    .only-content-flex {
+        @apply flex flex-col md:flex-row items-center justify-center px-4 md:px-16 py-8 my-8 md:py-16 md:my-16;
+    }
+    .only-content-flex:nth-child( even ) {
+        @apply bg-light-bg text-light-tx;
+    }
+    .only-content-flex:nth-child( odd ) {
+        @apply bg-dark-bg text-dark-tx;
+    }
+    .only-content-content {
+        @apply w-full md:w-2/5 text-center flex flex-col items-stretch;
+    }
+
+    .content-and-image-flex {
+        @apply flex flex-col items-center justify-center px-4 md:px-16 py-8 my-8 md:py-16 md:my-16;
+    }
+    .content-and-image-flex:nth-child( even ) {
+        @apply bg-light-bg text-light-tx;
+    }
+    .content-and-image-flex:nth-child( odd ) {
+        @apply bg-dark-bg text-dark-tx;
+    }
+    .content-and-image-intraflex {
+        @apply flex flex-col md:flex-row w-full items-center
+    }
+    .content-and-image-image {
+        @apply bg-no-repeat bg-cover bg-center aspect-square w-full md:aspect-auto md:w-auto md:min-h-[180px] md:bg-contain md:grow md:basis-0 md:self-stretch;
+    }
+    .two-side-content {
+        @apply flex flex-col items-stretch md:grow basis-0
+    }
+
+    .title-box {
+        @apply flex flex-row items-center justify-center w-full pt-32
+    }
+    .title-tag {
+        @apply text-3xl md:text-6xl font-bold w-5/6 md:w-2/5 border-y-4 border-details-bg rounded text-dark-tx py-4 text-center
+    }
+
+    .carousel-row {
+        @apply flex flex-row items-center justify-center w-full pt-32
+    }
+    .carousel-ul {
+        @apply flex flex-col md:flex-row flex-wrap justify-center gap-4 w-2/3
+    }
+    .carousel-item {
+        @apply w-full md:w-1/4 shadow-light-tx shadow-lg bg-light-bg text-light-tx hover:bg-details-bg hover:text-details-tx flex flex-row md:flex-col justify-center items-center border-4 border-details-bg p-4
+    }
+    
+    .button {
+        @apply border-4 border-details-bg rounded bg-light-bg hover:bg-details-bg text-light-tx hover:text-details-tx cursor-pointer p-2
+    }
+}
+    
+    /* h1 {
+        @apply text-4xl md:text-7xl font-bold
+    } */
+
+    /* h2 {
+        @apply text-3xl md:text-6xl font-bold
+    } */
+
+    /* h4 {
+        @apply text-xl md:text-2xl pb-4 underline
+    } */
+
+    /* h5 {
+        @apply text-lg font-bold underline
+    } */
+
+    /* .tiletitle {
+        @apply text-xl md:text-2xl p-4
+    } */
+
+    /* .separator {
+        @apply border-4 rounded border-details-bg self-stretch mx-8 my-8 md:my-0
+    } */
+
+    /* .alumnisgss_members {
+        @apply w-full mt-16
+    } */
+
+    /* dl {
+        @apply grid grid-cols-1 md:grid-cols-4 gap-2 m-2 p-2 border-y-2 rounded border-details-bg mt-8
+    } */
+
+    /* dt {
+        @apply md:col-span-4 text-center text-lg font-bold
+    } */
+
+    /* dd {
+        @apply text-center
+    } */
+
+    /* .alumnisgss_members_students {
+        @apply italic
+    } */
+
+    /* .alumnisgss_members_supporter {
+        @apply underline
+    } */
+
+    /* form {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-2 m-2 p-2
+    } */
+
+    /* label {
+        @apply text-center md:text-right my-auto
+    } */
+
+    /* input {
+        @apply text-light-tx
+    } */
+
+
+    /* input[type="submit"] {
+        @apply col-span-2 my-4 button
+    } */
+
+    /* input[type="checkbox"] {
+        @apply my-auto
+    } */
+
+    /* input[type="file"] {
+        @apply bg-light-bg
+    } */
+
+    /* output {
+        @apply col-span-2 border-4 border-details-bg rounded p-2 mb-4
+    } */
+
+    /* input[type=""] {
+        @apply col-span-2
+    } */
