@@ -61,6 +61,9 @@
     .carousel-item {
         @apply w-full md:w-1/4 shadow-light-tx shadow-lg bg-light-bg text-light-tx hover:bg-details-bg hover:text-details-tx flex flex-row md:flex-col justify-center items-center border-4 border-details-bg p-4
     }
+    .carousel-title {
+        @apply text-xl md:text-2xl p-4
+    }
     
     .button {
         @apply border-4 border-details-bg rounded bg-light-bg hover:bg-details-bg text-light-tx hover:text-details-tx cursor-pointer p-2

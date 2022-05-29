@@ -28,7 +28,7 @@ function category_carousel_renderer( $attr, $content ) {
                 $output .= '<img class="w-1/3 md:w-full max-h-40 hidden group-hover:block" src="' . get_template_directory_uri() . '/assets/logo_contrast.svg" />';
             }
 
-            $output .= '<span class="tiletitle text-center px-4">' . apply_filters('the_title', $post->post_title ) . '</span>';
+            $output .= '<span class="carousel-title">' . apply_filters('the_title', $post->post_title ) . '</span>';
             $output .= '</a>';
         }
         $output .= '</ul></div>';
