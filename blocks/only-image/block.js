@@ -132,8 +132,12 @@ module.exports = __webpack_require__(3);
                 "div",
                 { className: "only-content-flex" },
                 wp.element.createElement("span", { className: "separator" }),
-                wp.element.createElement("img", { className: "only-content-content",
-                    src: props.attributes.mediaSrc }),
+                wp.element.createElement(
+                    "div",
+                    { className: "only-content-content" },
+                    wp.element.createElement("img", { className: "max-w-full max-h-[250px]",
+                        src: props.attributes.mediaSrc })
+                ),
                 wp.element.createElement("span", { className: "separator" })
             );
         }

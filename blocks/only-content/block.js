@@ -124,13 +124,13 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                 wp.element.createElement("span", { className: "separator" }),
                 wp.element.createElement(
                     "span",
-                    _extends({ className: "only-content-content" }, blockProps),
+                    { className: "only-content-content" },
                     wp.element.createElement(wp.blockEditor.RichText.Content, {
                         tagName: "div",
                         className: "text-center",
                         value: props.attributes.content
                     }),
-                    wp.element.createElement(wp.blockEditor.InnerBlocks.Content, null)
+                    wp.element.createElement(wp.blockEditor.InnerBlocks.Content, blockProps)
                 ),
                 wp.element.createElement("span", { className: "separator" })
             );

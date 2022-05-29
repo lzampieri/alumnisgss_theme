@@ -23,7 +23,7 @@
         @apply bg-dark-bg text-dark-tx;
     }
     .only-content-content {
-        @apply w-full md:w-2/5 text-center flex flex-col items-stretch;
+        @apply w-full md:w-2/5 text-center flex flex-col items-center;
     }
 
     .content-and-image-flex {

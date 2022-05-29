@@ -39,14 +39,14 @@
             return ( 
                 <div className="only-content-flex">
                     <span className="separator"></span>
-                        <span className="only-content-content" { ...blockProps }>
-                            <wp.blockEditor.RichText.Content
-                                tagName="div"
-                                className="text-center"
-                                value={ props.attributes.content }
-                                />
-                            <wp.blockEditor.InnerBlocks.Content />
-                        </span>
+                    <span className="only-content-content">
+                        <wp.blockEditor.RichText.Content
+                            tagName="div"
+                            className="text-center"
+                            value={ props.attributes.content }
+                            />
+                        <wp.blockEditor.InnerBlocks.Content { ...blockProps } />
+                    </span>
                     <span className="separator"></span>
                 </div>
             )

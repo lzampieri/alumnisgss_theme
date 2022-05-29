@@ -50,8 +50,10 @@
             return ( 
                 <div className="only-content-flex">
                     <span className="separator"></span>
-                        <img className="only-content-content"
+                    <div className="only-content-content">
+                        <img className="max-w-full max-h-[250px]"
                             src={ props.attributes.mediaSrc } />
+                    </div>
                     <span className="separator"></span>
                 </div>
             )
