@@ -15,7 +15,7 @@
                 default: ''
             }
         },
-        icon: "title",
+        icon: "book",
         edit: function ( props ) {
             return (
                 <div class="flex flex-col items-center w-full py-16">

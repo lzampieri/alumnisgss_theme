@@ -93,7 +93,7 @@ module.exports = __webpack_require__(13);
                 default: ''
             }
         },
-        icon: "title",
+        icon: "book",
         edit: function (props) {
             return wp.element.createElement(
                 "div",

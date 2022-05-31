@@ -7,6 +7,7 @@ module.exports = {
         'menu-carousel/block': ['./menu-carousel/block.jsx'],
         'category-carousel/block': ['./category-carousel/block.jsx'],
         'small-title/block': ['./small-title/block.jsx'],
+        'subtitle/block': ['./subtitle/block.jsx'],
         'button/block': ['./button/block.jsx'],
         'cit/block': ['./cit/block.jsx']
     },
