@@ -9,29 +9,45 @@
             text: {
                 type: 'text',
                 default: ''
+            },
+            subtext: {
+                type: 'text',
+                default: ''
             }
         },
         icon: "title",
         edit: function ( props ) {
             return (
-                <div class="flex flex-row items-center justify-center w-full py-8">
-                    <h2 class="text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx py-4 text-center">
+                <div class="flex flex-col items-center w-full py-16">
+                    <span class="text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx text-center">
                         <wp.blockEditor.RichText
                             value={ props.attributes.text }
                             onChange = { ( text ) => { props.setAttributes( { text: text } ); } }
                             placeholder = "Titolo"
                             />
-                    </h2>
+                    </span>
+                    <span class="text-lg md:text-2xl font-bold w-5/6 md:w-2/5 text-body-tx text-center opacity-50">
+                        <wp.blockEditor.RichText
+                            value={ props.attributes.subtext }
+                            onChange = { ( subtext ) => { props.setAttributes( { subtext: subtext } ); } }
+                            placeholder = "Ev. sottotitolo"
+                            />
+                    </span>
                 </div>
             )
         },
         save: function ( props ) {
             return (
-                <div class="flex flex-row items-center justify-center w-full py-8">
+                <div class="flex flex-col items-center w-full py-16">
                     <wp.blockEditor.RichText.Content
-                        tagName="h2"
-                        className="text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx py-4 text-center"
+                        tagName="span"
+                        className="text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx text-center"
                         value={ props.attributes.text }
+                    />
+                    <wp.blockEditor.RichText.Content
+                        tagName="span"
+                        className="text-lg md:text-2xl font-bold w-5/6 md:w-2/5 text-body-tx text-center opacity-50"
+                        value={ props.attributes.subtext }
                     />
                 </div>
             )

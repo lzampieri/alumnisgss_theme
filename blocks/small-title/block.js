@@ -87,16 +87,20 @@ module.exports = __webpack_require__(13);
             text: {
                 type: 'text',
                 default: ''
+            },
+            subtext: {
+                type: 'text',
+                default: ''
             }
         },
         icon: "title",
         edit: function (props) {
             return wp.element.createElement(
                 "div",
-                { "class": "flex flex-row items-center justify-center w-full py-8" },
+                { "class": "flex flex-col items-center w-full py-16" },
                 wp.element.createElement(
-                    "h2",
-                    { "class": "text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx py-4 text-center" },
+                    "span",
+                    { "class": "text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx text-center" },
                     wp.element.createElement(wp.blockEditor.RichText, {
                         value: props.attributes.text,
                         onChange: text => {
@@ -104,17 +108,33 @@ module.exports = __webpack_require__(13);
                         },
                         placeholder: "Titolo"
                     })
+                ),
+                wp.element.createElement(
+                    "span",
+                    { "class": "text-lg md:text-2xl font-bold w-5/6 md:w-2/5 text-body-tx text-center opacity-50" },
+                    wp.element.createElement(wp.blockEditor.RichText, {
+                        value: props.attributes.subtext,
+                        onChange: subtext => {
+                            props.setAttributes({ subtext: subtext });
+                        },
+                        placeholder: "Ev. sottotitolo"
+                    })
                 )
             );
         },
         save: function (props) {
             return wp.element.createElement(
                 "div",
-                { "class": "flex flex-row items-center justify-center w-full py-8" },
+                { "class": "flex flex-col items-center w-full py-16" },
                 wp.element.createElement(wp.blockEditor.RichText.Content, {
-                    tagName: "h2",
-                    className: "text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx py-4 text-center",
+                    tagName: "span",
+                    className: "text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx text-center",
                     value: props.attributes.text
+                }),
+                wp.element.createElement(wp.blockEditor.RichText.Content, {
+                    tagName: "span",
+                    className: "text-lg md:text-2xl font-bold w-5/6 md:w-2/5 text-body-tx text-center opacity-50",
+                    value: props.attributes.subtext
                 })
             );
         }
