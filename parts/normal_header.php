@@ -2,8 +2,10 @@
     flex
     flex-col md:flex-row
     w-full items-center p-8
+    bg-header-bg
+    text-header-tx
     ">
-    <a href="<?php echo home_url(); ?>" class="text-dark-tx grow-0 w-full md:w-1/3">
+    <a href="<?php echo home_url(); ?>" class="grow-0 w-full md:w-1/3">
         <h4 class="text-xl md:text-2xl pb-4 underline"><?php echo get_bloginfo('name'); ?></h4>
         <?php if( !empty( get_bloginfo('description') ) ) {
             echo get_bloginfo('description');

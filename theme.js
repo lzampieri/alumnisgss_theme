@@ -2,8 +2,16 @@ module.exports = {
     colors: {
         transparent: 'transparent',
         current: 'currentColor',
+        header: {
+            'bg': '#111111',
+            'tx': '#ffffff'
+        },
+        body: {
+            'bg': '#ffffff',
+            'tx': '#000000'
+        },
         details: {
-            'bg': '#9b0014',
+            'bg': '#cb0014',
             'tx': '#fbfcff'
         },
         dark: {

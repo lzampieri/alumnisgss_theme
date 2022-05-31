@@ -93,10 +93,10 @@ module.exports = __webpack_require__(13);
         edit: function (props) {
             return wp.element.createElement(
                 "div",
-                { "class": "flex flex-row items-center justify-center w-full bg-dark-bg py-8" },
+                { "class": "flex flex-row items-center justify-center w-full py-8" },
                 wp.element.createElement(
                     "h2",
-                    { "class": "text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-dark-tx py-4 text-center" },
+                    { "class": "text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx py-4 text-center" },
                     wp.element.createElement(wp.blockEditor.RichText, {
                         value: props.attributes.text,
                         onChange: text => {
@@ -113,7 +113,7 @@ module.exports = __webpack_require__(13);
                 { "class": "flex flex-row items-center justify-center w-full py-8" },
                 wp.element.createElement(wp.blockEditor.RichText.Content, {
                     tagName: "h2",
-                    className: "text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-dark-tx py-4 text-center",
+                    className: "text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx py-4 text-center",
                     value: props.attributes.text
                 })
             );
