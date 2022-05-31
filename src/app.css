@@ -30,10 +30,10 @@
         @apply flex flex-col items-center justify-center px-4 md:px-16 py-8 my-8 md:py-16 md:my-16;
     }
     .content-and-image-flex:nth-child( even ) {
-        @apply bg-light-bg text-light-tx;
+        @apply bg-light-bg text-light-tx border-light-tx;
     }
     .content-and-image-flex:nth-child( odd ) {
-        @apply bg-dark-bg text-dark-tx;
+        @apply bg-dark-bg text-dark-tx border-dark-tx;
     }
     .content-and-image-intraflex {
         @apply flex flex-col md:flex-row w-full items-center
@@ -58,8 +58,8 @@
         @apply text-xl md:text-2xl p-4
     }
     
-    .button {
-        @apply border-4 border-details-bg rounded bg-light-bg hover:bg-details-bg text-light-tx hover:text-details-tx cursor-pointer p-2
+    .abutton {
+        @apply border-b-2 hover:border-details-bg hover:text-details-bg uppercase font-bold cursor-pointer px-4
     }
 }
     

@@ -128,7 +128,7 @@ module.exports = __webpack_require__(15);
                     })
                 }),
                 wp.element.createElement(wp.components.TextControl, {
-                    className: "border-4 border-details-bg rounded-full bg-light-bg hover:bg-details-bg text-light-tx hover:text-details-tx cursor-pointer p-2",
+                    className: "abutton",
                     value: props.attributes.text,
                     onChange: newText => props.setAttributes({ text: newText }),
                     placeholder: "Testo..."
@@ -149,7 +149,7 @@ module.exports = __webpack_require__(15);
                     "a",
                     {
                         href: props.attributes.url,
-                        "class": "border-4 border-details-bg rounded-full bg-light-bg hover:bg-details-bg text-light-tx hover:text-details-tx cursor-pointer p-2" },
+                        "class": "abutton" },
                     props.attributes.text
                 )
             );
