@@ -9,7 +9,8 @@ module.exports = {
         'small-title/block': ['./small-title/block.jsx'],
         'subtitle/block': ['./subtitle/block.jsx'],
         'button/block': ['./button/block.jsx'],
-        'cit/block': ['./cit/block.jsx']
+        'cit/block': ['./cit/block.jsx'],
+        'internal-menu/block': ['./internal-menu/block.jsx']
     },
     output: {
         path: __dirname,
