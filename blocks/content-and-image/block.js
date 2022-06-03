@@ -96,21 +96,64 @@ module.exports = __webpack_require__(5);
             mediaSrc: {
                 type: 'string',
                 default: ''
+            },
+            theme: {
+                type: 'string',
+                default: 'dark'
+            },
+            direction: {
+                type: 'integer',
+                default: 'right'
             }
         },
         icon: "align-pull-right",
         edit: function (props) {
             const blockProps = wp.blockEditor.useBlockProps();
 
+            const theme_labels = {
+                'dark': 'Scuro',
+                'light': 'Chiaro'
+            };
+            const section_classes = {
+                'dark': 'section-dark',
+                'light': 'section-light'
+            };
+            const dir_icons = {
+                'right': 'align-pull-right',
+                'left': 'align-pull-left'
+            };
+            const section_dir_classes = {
+                'right': 'content-and-image-intraflex',
+                'left': 'content-and-image-intraflex-reverse'
+            };
+
             return wp.element.createElement(
                 "div",
-                { className: "content-and-image-flex" },
+                { className: 'content-and-image-flex ' + section_classes[props.attributes.theme] },
                 wp.element.createElement(
                     "div",
-                    { className: "content-and-image-intraflex" },
+                    { className: section_dir_classes[props.attributes.direction] },
                     wp.element.createElement(
                         "div",
                         { className: "two-side-content" },
+                        wp.element.createElement(wp.components.DropdownMenu, {
+                            icon: dir_icons[props.attributes.direction],
+                            controls: Object.keys(dir_icons).map((k, i) => {
+                                return {
+                                    icon: dir_icons[k],
+                                    onClick: () => props.setAttributes({ direction: k })
+                                };
+                            })
+                        }),
+                        wp.element.createElement(wp.components.DropdownMenu, {
+                            icon: "color-picker",
+                            controls: Object.keys(theme_labels).map((k, i) => {
+                                return {
+                                    title: theme_labels[k],
+                                    onClick: () => props.setAttributes({ theme: k })
+                                };
+                            })
+                        }),
                         wp.element.createElement(wp.blockEditor.RichText, {
                             value: props.attributes.content,
                             onChange: content => {
@@ -153,13 +196,21 @@ module.exports = __webpack_require__(5);
         },
         save: function (props) {
             const blockProps = wp.blockEditor.useBlockProps.save();
+            const section_classes = {
+                'dark': 'section-dark',
+                'light': 'section-light'
+            };
+            const section_dir_classes = {
+                'right': 'content-and-image-intraflex',
+                'left': 'content-and-image-intraflex-reverse'
+            };
 
             return wp.element.createElement(
                 "div",
-                { className: "content-and-image-flex" },
+                { className: 'content-and-image-flex ' + section_classes[props.attributes.theme] },
                 wp.element.createElement(
                     "div",
-                    { className: "content-and-image-intraflex" },
+                    { className: section_dir_classes[props.attributes.direction] },
                     wp.element.createElement(
                         "span",
                         { className: "two-side-content" },

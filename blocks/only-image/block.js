@@ -92,17 +92,40 @@ module.exports = __webpack_require__(3);
             mediaSrc: {
                 type: 'string',
                 default: ''
+            },
+            direction: {
+                type: 'integer',
+                default: 'right'
             }
         },
         icon: "cover-image",
         edit: function (props) {
+
+            const theme_labels = {
+                'dark': 'Scuro',
+                'light': 'Chiaro'
+            };
+            const section_classes = {
+                'dark': 'section-dark',
+                'light': 'section-light'
+            };
+
             return wp.element.createElement(
                 "div",
-                { className: "only-content-flex" },
+                { className: 'only-content-flex ' + section_classes[props.attributes.theme] },
                 wp.element.createElement("span", { className: "separator" }),
                 wp.element.createElement(
                     "div",
                     { className: "only-content-content" },
+                    wp.element.createElement(wp.components.DropdownMenu, {
+                        icon: "color-picker",
+                        controls: Object.keys(theme_labels).map((k, i) => {
+                            return {
+                                title: theme_labels[k],
+                                onClick: () => props.setAttributes({ theme: k })
+                            };
+                        })
+                    }),
                     wp.element.createElement("img", { src: props.attributes.mediaSrc }),
                     wp.element.createElement(wp.blockEditor.MediaUpload, {
                         allowedTypes: ['image'],
@@ -128,9 +151,14 @@ module.exports = __webpack_require__(3);
             );
         },
         save: function (props) {
+            const section_classes = {
+                'dark': 'section-dark',
+                'light': 'section-light'
+            };
+
             return wp.element.createElement(
                 "div",
-                { className: "only-content-flex" },
+                { className: 'only-content-flex ' + section_classes[props.attributes.theme] },
                 wp.element.createElement("span", { className: "separator" }),
                 wp.element.createElement(
                     "div",

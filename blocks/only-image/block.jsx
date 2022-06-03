@@ -14,14 +14,35 @@
             mediaSrc: {
                 type: 'string',
                 default: ''
+            },
+            direction: {
+                type: 'integer',
+                default: 'right'
             }
         },
         icon: "cover-image",
         edit: function ( props ) {
+            
+            const theme_labels = {
+                'dark': 'Scuro',
+                'light': 'Chiaro'
+            }
+            const section_classes = {
+                'dark': 'section-dark',
+                'light': 'section-light'
+            }
+
             return ( 
-                <div className="only-content-flex">
+                <div className={'only-content-flex ' + section_classes[ props.attributes.theme ] }>
                     <span className="separator"></span>
                         <div className="only-content-content">
+                            <wp.components.DropdownMenu
+                                icon="color-picker"
+                                controls={ Object.keys( theme_labels ).map( ( k,i ) => { return {
+                                    title: theme_labels[ k ],
+                                    onClick: () => props.setAttributes( { theme: k } )
+                                } } ) }
+                            />
                             <img src={ props.attributes.mediaSrc } />
                             <wp.blockEditor.MediaUpload
                                 allowedTypes={ ['image'] }
@@ -47,8 +68,13 @@
             )
         },
         save: function ( props ) {
+            const section_classes = {
+                'dark': 'section-dark',
+                'light': 'section-light'
+            }
+
             return ( 
-                <div className="only-content-flex">
+                <div className={'only-content-flex ' + section_classes[ props.attributes.theme ] }>
                     <span className="separator"></span>
                     <div className="only-content-content">
                         <img className="max-w-full max-h-[250px]"

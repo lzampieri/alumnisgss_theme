@@ -4,7 +4,6 @@ function alumnisgss_blocks_register() {
     require( __DIR__ . '/only-content/block.php' );
     require( __DIR__ . '/only-image/block.php' );
     require( __DIR__ . '/content-and-image/block.php' );
-    require( __DIR__ . '/content-and-image-rev/block.php' );
     require( __DIR__ . '/menu-carousel/block.php' );
     require( __DIR__ . '/category-carousel/block.php' );
     require( __DIR__ . '/small-title/block.php' );
