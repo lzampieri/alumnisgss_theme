@@ -15,6 +15,10 @@
                 type: 'string',
                 default: ''
             },
+            theme: {
+                type: 'string',
+                default: 'dark'
+            },
             direction: {
                 type: 'integer',
                 default: 'right'

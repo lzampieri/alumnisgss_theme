@@ -93,6 +93,10 @@ module.exports = __webpack_require__(3);
                 type: 'string',
                 default: ''
             },
+            theme: {
+                type: 'string',
+                default: 'dark'
+            },
             direction: {
                 type: 'integer',
                 default: 'right'

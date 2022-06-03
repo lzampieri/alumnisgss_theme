@@ -89,6 +89,10 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                 type: 'string',
                 default: ''
             },
+            theme: {
+                type: 'string',
+                default: 'dark'
+            },
             direction: {
                 type: 'integer',
                 default: 'right'
