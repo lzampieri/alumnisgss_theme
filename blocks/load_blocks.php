@@ -4,6 +4,9 @@ function alumnisgss_blocks_register() {
     require( __DIR__ . '/only-content/block.php' );
     require( __DIR__ . '/only-image/block.php' );
     require( __DIR__ . '/content-and-image/block.php' );
+    require( __DIR__ . '/content-and-content/block.php' );
+    require( __DIR__ . '/content-and-content-thecontent/block.php' );
+    require( __DIR__ . '/content-and-content-theseparator/block.php' );
     require( __DIR__ . '/menu-carousel/block.php' );
     require( __DIR__ . '/category-carousel/block.php' );
     require( __DIR__ . '/small-title/block.php' );
@@ -11,6 +14,7 @@ function alumnisgss_blocks_register() {
     require( __DIR__ . '/button/block.php' );
     require( __DIR__ . '/cit/block.php' );
     require( __DIR__ . '/internal-menu/block.php' );
+    require( __DIR__ . '/fb-feed/block.php' );
 }
 
 add_action( 'init', 'alumnisgss_blocks_register' );

@@ -26,19 +26,19 @@
         @apply w-full md:w-2/5 text-center flex flex-col items-center;
     }
 
-    .content-and-image-flex {
+    .two-cols-flex {
         @apply flex flex-col items-center justify-center px-4 md:px-16 py-8 my-8 md:py-16 md:my-16;
     }
-    .content-and-image-intraflex {
+    .two-cols-intraflex {
         @apply flex flex-col md:flex-row w-full items-center
     }
-    .content-and-image-intraflex-reverse {
+    .two-cols-intraflex-reverse {
         @apply flex flex-col md:flex-row-reverse w-full items-center
     }
-    .content-and-image-image {
+    .two-cols-image {
         @apply bg-no-repeat bg-cover bg-center aspect-square w-full md:aspect-auto md:w-auto md:min-h-[180px] md:bg-contain md:grow md:basis-0 md:self-stretch;
     }
-    .two-side-content {
+    .two-cols-content {
         @apply flex flex-col items-stretch md:grow basis-0
     }
 

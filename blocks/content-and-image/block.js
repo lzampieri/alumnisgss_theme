@@ -123,13 +123,13 @@ module.exports = __webpack_require__(5);
                 'left': 'align-pull-left'
             };
             const section_dir_classes = {
-                'right': 'content-and-image-intraflex',
-                'left': 'content-and-image-intraflex-reverse'
+                'right': 'two-cols-intraflex',
+                'left': 'two-cols-intraflex-reverse'
             };
 
             return wp.element.createElement(
                 "div",
-                { className: 'content-and-image-flex ' + section_classes[props.attributes.theme] },
+                { className: 'two-cols-flex ' + section_classes[props.attributes.theme] },
                 wp.element.createElement(
                     "div",
                     { className: section_dir_classes[props.attributes.direction] },
@@ -167,7 +167,7 @@ module.exports = __webpack_require__(5);
                     wp.element.createElement(
                         "span",
                         {
-                            "class": "content-and-image-image",
+                            "class": "two-cols-image",
                             style: {
                                 backgroundImage: "url(" + props.attributes.mediaSrc + ")"
                             } },
@@ -201,13 +201,13 @@ module.exports = __webpack_require__(5);
                 'light': 'section-light'
             };
             const section_dir_classes = {
-                'right': 'content-and-image-intraflex',
-                'left': 'content-and-image-intraflex-reverse'
+                'right': 'two-cols-intraflex',
+                'left': 'two-cols-intraflex-reverse'
             };
 
             return wp.element.createElement(
                 "div",
-                { className: 'content-and-image-flex ' + section_classes[props.attributes.theme] },
+                { className: 'two-cols-flex ' + section_classes[props.attributes.theme] },
                 wp.element.createElement(
                     "div",
                     { className: section_dir_classes[props.attributes.direction] },
@@ -222,7 +222,7 @@ module.exports = __webpack_require__(5);
                     ),
                     wp.element.createElement("span", { "class": "separator" }),
                     wp.element.createElement("span", {
-                        "class": "content-and-image-image",
+                        "class": "two-cols-image",
                         style: {
                             backgroundImage: "url(" + props.attributes.mediaSrc + ")"
                         } })
