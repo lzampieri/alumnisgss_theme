@@ -97,7 +97,7 @@ module.exports = __webpack_require__(15);
             if (cats == null) {
                 return wp.element.createElement(
                     "div",
-                    { className: "content-and-image-flex" },
+                    { className: "two-cols-flex" },
                     "Loading..."
                 );
             }
@@ -109,7 +109,7 @@ module.exports = __webpack_require__(15);
 
             return wp.element.createElement(
                 "div",
-                { className: "content-and-image-flex" },
+                { className: "two-cols-flex" },
                 wp.element.createElement(wp.components.SelectControl, {
                     label: "Categoria:",
                     value: props.attributes.categoryId,

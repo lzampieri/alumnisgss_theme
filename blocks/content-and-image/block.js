@@ -135,7 +135,7 @@ module.exports = __webpack_require__(5);
                     { className: section_dir_classes[props.attributes.direction] },
                     wp.element.createElement(
                         "div",
-                        { className: "two-side-content" },
+                        { className: "two-cols-content" },
                         wp.element.createElement(wp.components.DropdownMenu, {
                             icon: dir_icons[props.attributes.direction],
                             controls: Object.keys(dir_icons).map((k, i) => {
@@ -213,7 +213,7 @@ module.exports = __webpack_require__(5);
                     { className: section_dir_classes[props.attributes.direction] },
                     wp.element.createElement(
                         "span",
-                        { className: "two-side-content" },
+                        { className: "two-cols-content" },
                         wp.element.createElement(wp.blockEditor.RichText.Content, {
                             tagName: "div",
                             value: props.attributes.content

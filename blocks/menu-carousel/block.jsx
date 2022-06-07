@@ -20,7 +20,7 @@
             
             if( menus == null ) {
                 return (
-                    <div className="content-and-image-flex">
+                    <div className="two-cols-flex">
                         Loading...
                     </div>
                 )
@@ -34,7 +34,7 @@
             )
 
             return (
-                <div className="content-and-image-flex">
+                <div className="two-cols-flex">
                     <wp.components.SelectControl
                         label="Menu:"
                         value={ props.attributes.menuId }

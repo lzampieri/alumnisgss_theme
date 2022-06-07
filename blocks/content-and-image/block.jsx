@@ -53,7 +53,7 @@
             return ( 
                 <div className={'two-cols-flex ' + section_classes[ props.attributes.theme ] }>
                     <div className={section_dir_classes[ props.attributes.direction ]}>
-                        <div className="two-side-content">
+                        <div className="two-cols-content">
                             <wp.components.DropdownMenu
                             icon={ dir_icons[ props.attributes.direction ] }
                             controls={ Object.keys( dir_icons ).map( ( k,i ) => { return {
@@ -118,7 +118,7 @@
             return ( 
                 <div className={'two-cols-flex ' + section_classes[ props.attributes.theme ] }>
                     <div className={section_dir_classes[ props.attributes.direction ]}>
-                        <span className="two-side-content">
+                        <span className="two-cols-content">
                             <wp.blockEditor.RichText.Content
                                 tagName="div"
                                 value={ props.attributes.content }

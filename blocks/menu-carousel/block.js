@@ -99,7 +99,7 @@ module.exports = __webpack_require__(13);
             if (menus == null) {
                 return wp.element.createElement(
                     "div",
-                    { className: "content-and-image-flex" },
+                    { className: "two-cols-flex" },
                     "Loading..."
                 );
             }
@@ -111,7 +111,7 @@ module.exports = __webpack_require__(13);
 
             return wp.element.createElement(
                 "div",
-                { className: "content-and-image-flex" },
+                { className: "two-cols-flex" },
                 wp.element.createElement(wp.components.SelectControl, {
                     label: "Menu:",
                     value: props.attributes.menuId,
