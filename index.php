@@ -10,7 +10,10 @@
         
         get_template_part('parts/title');
         
-        get_template_part('parts/content');
+        if( post_password_required() )
+            get_template_part('parts/require_password');
+        else
+            get_template_part('parts/content');
 
     }
 } ?>
