@@ -12,7 +12,7 @@ function alumnisgss_socials_register_option( $wp_customize ) {
                 'default' => '',
                 'type' => 'option',
                 'capability' => 'edit_theme_options'
-            ),
+            )
         );
     }
 

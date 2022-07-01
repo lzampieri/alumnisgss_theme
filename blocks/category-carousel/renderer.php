@@ -15,7 +15,7 @@ function category_carousel_renderer( $attr, $content ) {
         $output = <<<HTML
         <div class="carousel-row">
             <ul class="carousel-ul">
-        HTML;
+HTML;
         
         foreach( $posts as $post ) {
             $output .= '<a href="' .get_permalink( $post->ID ) . '" class="carousel-item group" >';

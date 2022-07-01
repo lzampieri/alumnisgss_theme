@@ -11,7 +11,7 @@ function menu_carousel_renderer( $attr, $content ) {
         $output = <<<HTML
         <div class="carousel-row">
             <ul class="carousel-ul">
-        HTML;
+HTML;
         
         foreach( $menu as $item ) {
             if( $item->menu_item_parent == 0 ) {

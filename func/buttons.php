@@ -7,7 +7,7 @@ function alumnisgss_buttons_option ( $wp_customize ) {
             'default' => '',
             'type' => 'option', // you can also use 'theme_mod'
             'capability' => 'edit_theme_options'
-        ),
+        )
     );
 
     $wp_customize->add_control( new WP_Customize_Control(
@@ -36,21 +36,21 @@ function alumnisgss_buttons_button( $attr ) {
     $btn = alumnisgss_buttons_thebutton( $attr );
     return <<<HTML
         <div class="w-full text-center py-4">$btn</div>
-    HTML;
+HTML;
 }
 
 function alumnisgss_buttons_button_left( $attr ) {
     $btn = alumnisgss_buttons_thebutton( $attr );
     return <<<HTML
         <div class="w-full text-left py-4">$btn</div>
-    HTML;
+HTML;
 }
 
 function alumnisgss_buttons_button_right( $attr ) {
     $btn = alumnisgss_buttons_thebutton( $attr );
     return <<<HTML
         <div class="w-full text-right py-4">$btn</div>
-    HTML;
+HTML;
 }
 
 function alumnisgss_buttons_thebutton( $attr ) {
@@ -60,5 +60,5 @@ function alumnisgss_buttons_thebutton( $attr ) {
     ), $attr );
     return <<<HTML
         <a href="{$args['href']}" class="button">{$args['title']}</a>
-    HTML;
+HTML;
 }

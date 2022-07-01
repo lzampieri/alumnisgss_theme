@@ -29,19 +29,19 @@ function internal_menu_renderer( $attr, $content ) {
                         transition-scale duration-300 ease-in-out origin-top absolute overflow-hidden left-0 right-0 z-40"
                     :class="hamburger_open_{$key} ? 'scale-y-100' : 'scale-y-0'">
                     <ul class="bg-header-bg flex flex-col items-center py-4 gap-2 px-8">
-        HTML;
+HTML;
                         foreach( $menu as $item ) { if( $item->menu_item_parent == 0 ) {
                             $output .= <<<HTML
                             <a href="{$item->url}">
                                 <span class="text-sm uppercase font-bold text-header-tx hover:text-details-bg">{$apply_filters( 'the_title', $item->title )}</span>
                             </a>
-                            HTML;
+HTML;
                             foreach( $menu as $subitem ) { if( $subitem->menu_item_parent == $item->ID ) {
                                 $output .= <<<HTML
                                     <a href="{$subitem->url}" >
                                         <span class="text-sm text-header-tx hover:text-details-bg">{$apply_filters(  'the_title', $subitem->title )}</span>
                                 </a>
-                                HTML;
+HTML;
                             } }
                         } }
         $output .= <<<HTML
@@ -50,14 +50,14 @@ function internal_menu_renderer( $attr, $content ) {
             </div>
             <div class="hidden md:block"> <!-- Large screen version -->
                 <ul class="bg-header-bg flex flex-row justify-center gap-8 px-8">
-        HTML;
+HTML;
                     foreach( $menu as $item ) { if( $item->menu_item_parent == 0 ) {
                         $output .= <<<HTML
                             <div 
                             class="group py-4"
                             >
                                 <a href="{$item->url}" class="text-sm uppercase font-bold text-header-tx group-hover:text-details-bg">{$apply_filters( 'the_title', $item->title )}</a>
-                        HTML;
+HTML;
                         if( array_key_exists( $item->ID, $thereare ) ) {
                             $output .= <<<HTML
                                 <div class="
@@ -65,11 +65,11 @@ function internal_menu_renderer( $attr, $content ) {
                                     transition-scale duration-300 ease-in-out
                                     bg-header-bg
                                     flex flex-col gap-4">
-                            HTML;
+HTML;
                                 foreach( $menu as $subitem ) { if( $subitem->menu_item_parent == $item->ID ) {
                                     $output .= <<<HTML
                                         <a href="{$subitem->url}" class="text-sm text-header-tx hover:text-details-bg first:pt-4 last:pb-4 px-8">{$apply_filters( 'the_title', $subitem->title )}</a>
-                                    HTML;
+HTML;
                                     } }
                             $output .= "</div>";
                         }
@@ -79,7 +79,7 @@ function internal_menu_renderer( $attr, $content ) {
                 </ul>
             </div>
         </div>
-        HTML;
+HTML;
     }
 
     return $output;
