@@ -19,6 +19,11 @@ function add_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
+function add_theme_features() {
+    add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'add_theme_features' );
+
 require('func/features.php');
 require('func/socials.php');
 require('func/buttons.php');
