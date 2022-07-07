@@ -13,7 +13,7 @@ module.exports = {
         './src/*',
         './blocks/**/block.jsx',
         './blocks/**/renderer.php',
-        './app.css' // To force compilation of all explicitly defined stuff
+        './src/app.css' // To force compilation of all explicitly defined stuff
     ],
     theme: require( './theme'),
     plugins: [

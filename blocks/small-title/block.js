@@ -100,7 +100,7 @@ module.exports = __webpack_require__(17);
                 { "class": "flex flex-col items-center w-full py-16" },
                 wp.element.createElement(
                     "span",
-                    { "class": "text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx text-center" },
+                    { "class": "text-2xl md:text-5xl font-bold two-fifths border-b-4 border-details-bg rounded text-body-tx text-center" },
                     wp.element.createElement(wp.blockEditor.RichText, {
                         value: props.attributes.text,
                         onChange: text => {
@@ -111,7 +111,7 @@ module.exports = __webpack_require__(17);
                 ),
                 wp.element.createElement(
                     "span",
-                    { "class": "text-lg md:text-2xl font-bold w-5/6 md:w-2/5 text-body-tx text-center opacity-50" },
+                    { "class": "text-lg md:text-2xl font-bold two-fifths text-body-tx text-center opacity-50" },
                     wp.element.createElement(wp.blockEditor.RichText, {
                         value: props.attributes.subtext,
                         onChange: subtext => {
@@ -128,12 +128,12 @@ module.exports = __webpack_require__(17);
                 { "class": "flex flex-col items-center w-full py-16" },
                 wp.element.createElement(wp.blockEditor.RichText.Content, {
                     tagName: "span",
-                    className: "text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx text-center",
+                    className: "text-2xl md:text-5xl font-bold two-fifths border-b-4 border-details-bg rounded text-body-tx text-center",
                     value: props.attributes.text
                 }),
                 wp.element.createElement(wp.blockEditor.RichText.Content, {
                     tagName: "span",
-                    className: "text-lg md:text-2xl font-bold w-5/6 md:w-2/5 text-body-tx text-center opacity-50",
+                    className: "text-lg md:text-2xl font-bold two-fifths text-body-tx text-center opacity-50",
                     value: props.attributes.subtext
                 })
             );

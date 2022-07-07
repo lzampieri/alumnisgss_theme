@@ -23,12 +23,12 @@
         @apply flex flex-col md:flex-row items-center justify-center px-4 md:px-16 py-8 my-8 md:py-16 md:my-16;
     }
     .only-content-content {
-        @apply w-full md:w-2/5 text-center flex flex-col items-center;
+        @apply w-full md:w-2/5 flex flex-col items-center;
     }
     .only-content-content p,
     .only-content-content ul,
     .only-content-content ol {
-        @apply w-full text-left
+        @apply w-full mb-4
     }
     .only-content-content ol {
         @apply list-decimal
@@ -55,13 +55,17 @@
     .two-cols-content p,
     .two-cols-content ul,
     .two-cols-content ol {
-        @apply w-full text-left
+        @apply w-full mb-4
     }
     .two-cols-content ol {
         @apply list-decimal
     }
     .two-cols-content ul {
         @apply list-disc
+    }
+
+    .two-fifths {
+        @apply w-fit min-w-[83%] md:min-w-[40%]
     }
 
     .carousel-row {

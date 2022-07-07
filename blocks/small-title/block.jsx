@@ -19,14 +19,14 @@
         edit: function ( props ) {
             return (
                 <div class="flex flex-col items-center w-full py-16">
-                    <span class="text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx text-center">
+                    <span class="text-2xl md:text-5xl font-bold two-fifths border-b-4 border-details-bg rounded text-body-tx text-center">
                         <wp.blockEditor.RichText
                             value={ props.attributes.text }
                             onChange = { ( text ) => { props.setAttributes( { text: text } ); } }
                             placeholder = "Titolo"
                             />
                     </span>
-                    <span class="text-lg md:text-2xl font-bold w-5/6 md:w-2/5 text-body-tx text-center opacity-50">
+                    <span class="text-lg md:text-2xl font-bold two-fifths text-body-tx text-center opacity-50">
                         <wp.blockEditor.RichText
                             value={ props.attributes.subtext }
                             onChange = { ( subtext ) => { props.setAttributes( { subtext: subtext } ); } }
@@ -41,12 +41,12 @@
                 <div class="flex flex-col items-center w-full py-16">
                     <wp.blockEditor.RichText.Content
                         tagName="span"
-                        className="text-2xl md:text-5xl font-bold w-5/6 md:w-2/5 border-b-4 border-details-bg rounded text-body-tx text-center"
+                        className="text-2xl md:text-5xl font-bold two-fifths border-b-4 border-details-bg rounded text-body-tx text-center"
                         value={ props.attributes.text }
                     />
                     <wp.blockEditor.RichText.Content
                         tagName="span"
-                        className="text-lg md:text-2xl font-bold w-5/6 md:w-2/5 text-body-tx text-center opacity-50"
+                        className="text-lg md:text-2xl font-bold two-fifths text-body-tx text-center opacity-50"
                         value={ props.attributes.subtext }
                     />
                 </div>
