@@ -47,6 +47,18 @@ $socialslist = explode( ', ', get_option( "alumnisgss_socials_list" ) );
             }
             ?>
         </ul>
+        <?php
+            $email = get_option( 'alumnisgss_socials_email', '' );
+            if( strlen( $email ) > 0 ) {
+                ?>
+                <p class="w-full text-center py-4 underline">
+                    <a href="mailto:<?php echo $email; ?>">
+                        <?php echo $email; ?>
+                    </a>
+                </p>
+                <?php
+            }
+        ?>
     </div>
 </div>
 <ul class="w-full bg-light-bg text-center px-8 pb-4">

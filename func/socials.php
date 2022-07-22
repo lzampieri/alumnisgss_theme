@@ -15,6 +15,14 @@ function alumnisgss_socials_register_option( $wp_customize ) {
             )
         );
     }
+    $wp_customize->add_setting(
+        'alumnisgss_socials_email',
+        array(
+            'default' => '',
+            'type' => 'option',
+            'capability' => 'edit_theme_options'
+        )
+    );
 
     $wp_customize->add_section( new WP_Customize_Section(
         $wp_customize,
@@ -39,5 +47,17 @@ function alumnisgss_socials_register_option( $wp_customize ) {
             )
         ) );
     }
+    $wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'alumnisgss_socials_email',
+        array(
+            'label'      => 'Indirizzo mail',
+            'description' => '',
+            'settings'   => 'alumnisgss_socials_email',
+            'priority'   => 0,
+            'section'    => 'alumnisgss_socials',
+            'type'       => 'text',
+        )
+    ) );
 }
 add_action( 'customize_register', 'alumnisgss_socials_register_option' );
