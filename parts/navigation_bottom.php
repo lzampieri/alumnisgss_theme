@@ -49,12 +49,15 @@ $socialslist = explode( ', ', get_option( "alumnisgss_socials_list" ) );
         </ul>
         <?php
             $email = get_option( 'alumnisgss_socials_email', '' );
-            if( strlen( $email ) > 0 ) {
+            $footnote = get_option( 'alumnisgss_socials_footnote', '' );
+            if( strlen( $email ) + strlen( $footnote ) > 0 ) {
                 ?>
-                <p class="w-full text-center py-4 underline">
-                    <a href="mailto:<?php echo $email; ?>">
+                <p class="w-full text-center py-4">
+                    <a class="underline" href="mailto:<?php echo $email; ?>">
                         <?php echo $email; ?>
                     </a>
+                    <?php if( strlen( $email ) * strlen( $footnote ) > 0 ) echo "<br/>"; ?>
+                    <?php echo nl2br($footnote); ?>
                 </p>
                 <?php
             }

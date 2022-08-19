@@ -40,6 +40,9 @@
     .two-cols-flex {
         @apply flex flex-col items-center justify-center px-4 md:px-64 py-8 my-8 md:py-16 md:my-16;
     }
+    .two-cols-flex-editor {
+        @apply flex flex-col items-center justify-center px-4 py-8 my-8 md:py-16 md:my-16;
+    }
     .two-cols-intraflex {
         @apply flex flex-col md:flex-row w-full items-center
     }

@@ -23,6 +23,14 @@ function alumnisgss_socials_register_option( $wp_customize ) {
             'capability' => 'edit_theme_options'
         )
     );
+    $wp_customize->add_setting(
+        'alumnisgss_socials_footnote',
+        array(
+            'default' => '',
+            'type' => 'option',
+            'capability' => 'edit_theme_options'
+        )
+    );
 
     $wp_customize->add_section( new WP_Customize_Section(
         $wp_customize,
@@ -57,6 +65,18 @@ function alumnisgss_socials_register_option( $wp_customize ) {
             'priority'   => 0,
             'section'    => 'alumnisgss_socials',
             'type'       => 'text',
+        )
+    ) );
+    $wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'alumnisgss_socials_footnote',
+        array(
+            'label'      => 'P. Iva e note finali',
+            'description' => '',
+            'settings'   => 'alumnisgss_socials_footnote',
+            'priority'   => 0,
+            'section'    => 'alumnisgss_socials',
+            'type'       => 'textarea',
         )
     ) );
 }

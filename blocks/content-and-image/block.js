@@ -102,7 +102,7 @@ module.exports = __webpack_require__(5);
                 default: 'dark'
             },
             direction: {
-                type: 'integer',
+                type: 'string',
                 default: 'right'
             }
         },
@@ -129,7 +129,7 @@ module.exports = __webpack_require__(5);
 
             return wp.element.createElement(
                 "div",
-                { className: 'two-cols-flex ' + section_classes[props.attributes.theme] },
+                { className: 'two-cols-flex-editor ' + section_classes[props.attributes.theme] },
                 wp.element.createElement(
                     "div",
                     { className: section_dir_classes[props.attributes.direction] },

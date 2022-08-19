@@ -24,7 +24,7 @@
                 default: 'dark'
             },
             direction: {
-                type: 'integer',
+                type: 'string',
                 default: 'right'
             }
         },
@@ -51,7 +51,7 @@
 
 
             return ( 
-                <div className={'two-cols-flex ' + section_classes[ props.attributes.theme ] }>
+                <div className={'two-cols-flex-editor ' + section_classes[ props.attributes.theme ] }>
                     <div className={section_dir_classes[ props.attributes.direction ]}>
                         <div className="two-cols-content">
                             <wp.components.DropdownMenu
