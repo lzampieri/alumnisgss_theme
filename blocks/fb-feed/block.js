@@ -101,7 +101,7 @@ module.exports = __webpack_require__(27);
                     { cite: "https://www.facebook.com/AlumniScuolaGalileiana", "class": "fb-xfbml-parse-ignore" },
                     wp.element.createElement(
                         "a",
-                        { href: "https://www.facebook.com/AlumniScuolaGalileiana" },
+                        { href: "https://www.facebook.com/AlumniScuolaGalileiana", "class": "no-underline" },
                         "Alumni Scuola Galileiana di Studi Superiori"
                     )
                 )

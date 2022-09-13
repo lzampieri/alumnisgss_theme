@@ -6,6 +6,10 @@
     body {
         @apply font-sans	
     }
+
+    a {
+        @apply underline
+    }
 }
 
 @layer utilities {
@@ -85,7 +89,7 @@
     }
     
     .abutton {
-        @apply border-b-2 hover:border-details-bg hover:text-details-bg uppercase font-bold cursor-pointer px-4
+        @apply border-b-2 hover:border-details-bg hover:text-details-bg uppercase font-bold cursor-pointer px-4 no-underline
     }
 }
     

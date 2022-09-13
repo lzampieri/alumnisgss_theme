@@ -177,7 +177,7 @@ module.exports = __webpack_require__(5);
                             render: ({ open }) => wp.element.createElement(
                                 "a",
                                 {
-                                    className: "button",
+                                    className: "button no-underline",
                                     onClick: open
                                 },
                                 props.attributes.mediaId == 0 ? "Scegli" : "Cambia",

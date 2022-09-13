@@ -18,7 +18,7 @@ function category_carousel_renderer( $attr, $content ) {
 HTML;
         
         foreach( $posts as $post ) {
-            $output .= '<a href="' .get_permalink( $post->ID ) . '" class="carousel-item group" >';
+            $output .= '<a href="' .get_permalink( $post->ID ) . '" class="carousel-item group no-underline" >';
             
             $image = get_the_post_thumbnail_url( $post );
             if( $image ) {

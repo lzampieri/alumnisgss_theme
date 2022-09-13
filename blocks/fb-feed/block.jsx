@@ -17,7 +17,7 @@
         },
         save: function ( props ) {
             return (
-                <div class="w-full fb-page" data-href="https://www.facebook.com/AlumniScuolaGalileiana" data-tabs="timeline" data-width="500" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/AlumniScuolaGalileiana" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AlumniScuolaGalileiana">Alumni Scuola Galileiana di Studi Superiori</a></blockquote></div>
+                <div class="w-full fb-page" data-href="https://www.facebook.com/AlumniScuolaGalileiana" data-tabs="timeline" data-width="500" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/AlumniScuolaGalileiana" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/AlumniScuolaGalileiana" class="no-underline">Alumni Scuola Galileiana di Studi Superiori</a></blockquote></div>
             )
         },
     } );

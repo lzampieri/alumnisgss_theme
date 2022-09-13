@@ -27,7 +27,7 @@
                 >
                 <?php foreach( $themenu as $item ) { if( $item->menu_item_parent == 0 ) { ?>
                     <a href="<?php echo $item->url; ?>"
-                    class="uppercase font-bold text-header-tx hover:text-details-bg"
+                    class="uppercase font-bold text-header-tx hover:text-details-bg no-underline"
                     @mouseover="open_<?php echo $item->ID; ?> = true"
                     @mouseover.away="open_<?php echo $item->ID; ?> = false"
                     >
@@ -35,7 +35,7 @@
                     </a>
                     <?php foreach( $themenu as $subitem ) { if( $subitem->menu_item_parent == $item->ID ) { ?>
                         <a href="<?php echo $subitem->url; ?>"
-                            class="text-sm text-header-tx hover:text-details-bg"
+                            class="text-sm text-header-tx hover:text-details-bg no-underline"
                             >
                             <?php echo apply_filters( 'the_title', $subitem->title ); ?>
                         </a>
@@ -49,7 +49,7 @@
             <ul class="bg-header-bg flex flex-row justify-end gap-8 px-8 py-4">
             <?php foreach( $themenu as $item ) { if( $item->menu_item_parent == 0 ) { ?>
                 <a href="<?php echo $item->url; ?>"
-                    class="group"
+                    class="group no-underline"
                     @mouseover="open_<?php echo $item->ID; ?> = true"
                     @mouseover.away="open_<?php echo $item->ID; ?> = false"
                     >
@@ -73,7 +73,7 @@
                     @mouseover.away="hover_<?php echo $item->ID; ?> = false" >
                 <?php foreach( $themenu as $subitem ) { if( $subitem->menu_item_parent == $item->ID ) { ?>
                     <a href="<?php echo $subitem->url; ?>"
-                        class="text-sm text-header-tx hover:text-details-bg"
+                        class="text-sm text-header-tx hover:text-details-bg no-underline"
                         >
                         <?php echo apply_filters( 'the_title', $subitem->title ); ?>
                     </a>

@@ -33,13 +33,13 @@ HTML;
                         foreach( $menu as $item ) { if( $item->menu_item_parent == 0 ) {
                             $output .= <<<HTML
                             <a href="{$item->url}">
-                                <span class="text-sm uppercase font-bold text-header-tx hover:text-details-bg">{$apply_filters( 'the_title', $item->title )}</span>
+                                <span class="text-sm uppercase font-bold text-header-tx hover:text-details-bg no-underline">{$apply_filters( 'the_title', $item->title )}</span>
                             </a>
 HTML;
                             foreach( $menu as $subitem ) { if( $subitem->menu_item_parent == $item->ID ) {
                                 $output .= <<<HTML
                                     <a href="{$subitem->url}" >
-                                        <span class="text-sm text-header-tx hover:text-details-bg">{$apply_filters(  'the_title', $subitem->title )}</span>
+                                        <span class="text-sm text-header-tx hover:text-details-bg no-underline">{$apply_filters(  'the_title', $subitem->title )}</span>
                                 </a>
 HTML;
                             } }
@@ -56,7 +56,7 @@ HTML;
                             <div 
                             class="group py-4"
                             >
-                                <a href="{$item->url}" class="text-sm uppercase font-bold text-header-tx group-hover:text-details-bg">{$apply_filters( 'the_title', $item->title )}</a>
+                                <a href="{$item->url}" class="text-sm uppercase font-bold text-header-tx group-hover:text-details-bg no-underline">{$apply_filters( 'the_title', $item->title )}</a>
 HTML;
                         if( array_key_exists( $item->ID, $thereare ) ) {
                             $output .= <<<HTML
@@ -68,7 +68,7 @@ HTML;
 HTML;
                                 foreach( $menu as $subitem ) { if( $subitem->menu_item_parent == $item->ID ) {
                                     $output .= <<<HTML
-                                        <a href="{$subitem->url}" class="text-sm text-header-tx hover:text-details-bg first:pt-4 last:pb-4 px-8">{$apply_filters( 'the_title', $subitem->title )}</a>
+                                        <a href="{$subitem->url}" class="text-sm text-header-tx hover:text-details-bg first:pt-4 last:pb-4 px-8 no-underline">{$apply_filters( 'the_title', $subitem->title )}</a>
 HTML;
                                     } }
                             $output .= "</div>";

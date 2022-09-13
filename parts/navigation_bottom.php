@@ -17,7 +17,7 @@ $socialslist = explode( ', ', get_option( "alumnisgss_socials_list" ) );
                         <?php
                             foreach( $themenu as $subitem ) {
                                 if( $subitem->menu_item_parent == $item->ID ) { ?>
-                                    <a href="<?php echo $subitem->url; ?>">
+                                    <a href="<?php echo $subitem->url; ?>" class="no-underline">
                                         <?php echo apply_filters( 'the_title', $subitem->title ); ?>
                                     </a><br/>
                                 <?php } ?>
@@ -38,6 +38,7 @@ $socialslist = explode( ', ', get_option( "alumnisgss_socials_list" ) );
                     <a class="
                         aspect-square w-8
                         bg-no-repeat bg-cover bg-center
+                        no-underline
                         "
                         style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/social/<?php echo $s; ?>.svg')"
                         href="<?php echo $link; ?>"

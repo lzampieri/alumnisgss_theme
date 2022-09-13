@@ -86,7 +86,7 @@
                                 value={ props.attributes.mediaId }
                                 render={ ({open}) => (
                                     <a
-                                        className="button"
+                                        className="button no-underline"
                                         onClick={open}
                                         >
                                         { props.attributes.mediaId == 0 ? "Scegli" : "Cambia" } immagine
