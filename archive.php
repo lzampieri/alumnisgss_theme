@@ -5,10 +5,7 @@
 <?php get_template_part('parts/navigation'); ?>
 
 <?php if ( have_posts() ) {
-    echo <<<HTML
-    <div class="carousel-row">
-        <ul class="carousel-ul">
-    HTML;
+    echo '<div class="carousel-row"><ul class="carousel-ul">';
     
     while( have_posts() ) {
         the_post( );
