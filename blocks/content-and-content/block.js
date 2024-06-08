@@ -112,6 +112,15 @@ module.exports = __webpack_require__(7);
             return wp.element.createElement(
                 "div",
                 { className: 'content-and-content-flex ' + section_classes[props.attributes.theme] },
+                wp.element.createElement(wp.components.DropdownMenu, {
+                    icon: "color-picker",
+                    controls: Object.keys(theme_labels).map((k, i) => {
+                        return {
+                            title: theme_labels[k],
+                            onClick: () => props.setAttributes({ theme: k })
+                        };
+                    })
+                }),
                 wp.element.createElement("div", innerBlocksProps)
             );
         },

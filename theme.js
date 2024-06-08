@@ -8,7 +8,9 @@ module.exports = {
         },
         body: {
             'bg': '#ffffff',
-            'tx': '#000000'
+            'tx': '#000000',
+            'tit': '#111111',
+            'sub': '#d0ccd0'
         },
         details: {
             'bg': '#cb0014',
@@ -16,11 +18,15 @@ module.exports = {
         },
         dark: {
             'bg': '#404040',
-            'tx': '#fbfcff'
+            'tx': '#fbfcff',
+            'tit': '#ffffff',
+            'sub': '#d0ccd0'
         },
         light: {
             'bg': '#d0ccd0',
-            'tx': '#242424'
+            'tx': '#242424',
+            'tit': '#000000',
+            'sub': '#404040'
         }
     }
 }
